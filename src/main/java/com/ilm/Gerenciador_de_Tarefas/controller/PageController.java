@@ -7,23 +7,30 @@ public class PageController {
 
     @GetMapping("/pagina_principal")
     public String mainPage() {
-        return "pagina_principal"; // Renderiza pagina_principal.html
+        return "pagina_principal";
     }
 
     @GetMapping("/tarefas")
-    public String cadastroPage() {
-        return "cadastro"; // Renderiza tarefas.html
+    public String tarefa() {
+        return "tarefas";
+    }
+
+    @GetMapping("/cadastro")
+    public String cadastro() {
+
+        return "cadastro";
     }
 
     @GetMapping("/logout")
     public String logout() {
-        // Lógica de logout (se necessário)
-        return "redirect:/index"; // Redireciona para a página inicial
+
+        return "redirect:/index";
     }
+
 
     @GetMapping("/")
     public String indexPage() {
-        return "index"; // Renderiza index.html
+        return "index";
     }
 
 
