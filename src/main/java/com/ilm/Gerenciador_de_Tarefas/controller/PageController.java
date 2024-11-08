@@ -4,12 +4,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class PageController {
-
-    @GetMapping("/pagina_principal")
-    public String mainPage() {
-        return "pagina_principal";
-    }
-
+    
     @GetMapping("/tarefas")
     public String tarefa() {
         return "tarefas";

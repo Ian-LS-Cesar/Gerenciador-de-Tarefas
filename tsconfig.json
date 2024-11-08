@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "outDir": "./src/main/resources/static/js",
+    "types": ["bootstrap"]
+  },
+  "include": ["src/main/resources/static/ts/**/*", "src/main/resources/static/js/login.js", "src/main/resources/static/js/cadastro.js", "src/main/resources/static/js/tarefas.js"]
+}

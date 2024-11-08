@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-Br" xmlns:th="http://www.thymeleaf.org">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -18,39 +18,51 @@
     <link rel="stylesheet" href="/css/styles.css" />
     <link rel="stylesheet" href="/css/login.css" />
     <title>Login</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="caixa-login">
-        <h1>Login</h1>
-        <div id="imagem-login">
-            <img src="/images/Foto_Login.jpeg" alt="Logo" />
-        </div>
-        <div class="ir-para-cadastro">
-            <a th:href="@{/cadastro}">Não tem conta? Ir para o cadastro</a>
-        </div>
+      <h1>Login</h1>
+      <div id="imagem-login">
+        <img src="/images/Foto_Login.jpeg" alt="Logo" />
+      </div>
+      <div class="ir-para-cadastro">
+        <a th:href="@{/cadastro}">Não tem conta? Ir para o cadastro</a>
+      </div>
 
-        <div class="mb-3">
-            <label for="login-usuario" class="form-label">Nome de Usuário</label>
-            <input type="text" class="form-control" id="login-usuario" placeholder="Usuário" />
-        </div>
+      <div class="mb-3">
+        <label for="login-usuario" class="form-label">Nome de Usuário</label>
+        <input
+          type="text"
+          class="form-control"
+          id="login-usuario"
+          placeholder="Usuário"
+        />
+      </div>
 
-        <div class="mb-3">
-            <label for="login-senha" class="form-label">Senha</label>
-            <input type="password" class="form-control" id="login-senha" placeholder="Senha" />
-            <div class="col-auto">
-                <button type="submit" class="btn btn-primary mb-3" id="login-submit">Entrar</button>
-            </div>
+      <div class="mb-3">
+        <label for="login-senha" class="form-label">Senha</label>
+        <input
+          type="password"
+          class="form-control"
+          id="login-senha"
+          placeholder="Senha"
+        />
+        <div class="col-auto">
+          <button type="submit" class="btn btn-primary mb-3" id="login-submit">
+            Entrar
+          </button>
         </div>
+      </div>
     </div>
 
     <!-- Hidden link for JavaScript to access the URL dynamically -->
-    <a id="paginaPrincipalUrl" th:href="@{/pagina_principal}" style="display:none;"></a>
+    <a id="paginaTarefaUrl" th:href="@{/tarefas}" style="display: none"></a>
 
-    <script src="/js/login.ts"></script>
+    <script src="/js/login.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-</body>
+  </body>
 </html>
