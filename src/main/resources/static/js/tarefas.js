@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var prazoTarefaInput = document.getElementById('prazo-tarefa');
     var salvarButton = document.getElementById('salvar-tarefa-button');
     var tarefasPendentesDiv = document.getElementById('lista-tarefas-pendentes');
+    var tarefasFinalizadasDiv = document.getElementById('lista-tarefas-finalizadas');
     salvarButton.addEventListener('click', function () {
         criarTarefa();
     });
@@ -20,7 +21,14 @@ document.addEventListener('DOMContentLoaded', function () {
         var titulo = tituloTarefaInput.value;
         var descricao = descricaoTarefaInput.value;
         var prazo = formatarData(prazoTarefaInput.value);
-        
+        var hoje = new Date();
+
+        hoje.setHours(0,0,0,0);
+
+        if (prazoTarefaInput < hoje){
+            alert("O prazo não pode ser menor que a data atual!");
+            return;
+        }
         var tarefa = document.createElement('div');
 
         tarefa.classList.add('tarefa-pendente');
@@ -28,10 +36,29 @@ document.addEventListener('DOMContentLoaded', function () {
         <h3>${titulo}</h3>
         <p>${descricao}</p>
         <p><strong>Prazo:</strong> ${prazo}</p>
+        <button type="button" class="botao-finalizar-tarefa btn btn-success">Finalizar Tarefa</button>
         `;
+
+        tarefa.querySelector('.botao-finalizar-tarefa').addEventListener('click', function() {
+            finalizarTarefa(tarefa);
+        });
+
         tarefasPendentesDiv.appendChild(tarefa);
         tituloTarefaInput.value = '';
         descricaoTarefaInput.value = '';
         prazoTarefaInput.value = '';
+    }
+
+    function finalizarTarefa(tarefa) {
+        
+        tarefasPendentesDiv.removeChild(tarefa);
+        
+        
+        tarefa.classList.remove('tarefa-pendente'); 
+        tarefa.classList.add('tarefa-finalizada'); 
+
+        
+        tarefasFinalizadasDiv.appendChild(tarefa);
+        tarefa.querySelector('.botao-finalizar-tarefa').remove();
     }
 });
