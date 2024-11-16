@@ -13,7 +13,7 @@ body {
     background-color: #fff; /* Optional: Set a background color for the body */
 }
 
-.caixa-cadastro {
+.caixa-login {
     display: flex;
     flex-direction: column;
     justify-content: center; /* Center content inside caixa-login */
@@ -24,28 +24,18 @@ body {
     border-radius: 10px; /* Optional: rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Optional: shadow for depth */
 }
-
-#cadastro-usuario{
-    width: 300px;
-}
-#cadastro-email{
-    width: 300px;
-}
-#cadastro-senha{
+#login-usuario{
     width: 300px;
 }
 
-#cadastro-confirmar-senha{
+#login-senha{
     width: 300px;
 }
 
-#cadastro-datalist-funcoes{
-    width: 300px;
-}
-#cadastro-submit{
+#login-submit{
     margin-top: 20px;
     width: 100px;
 }
-.ir-para-login{
+.ir-para-cadastro{
     margin: 30px;
 }
