@@ -1,51 +1,85 @@
 * {
-    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
     font-family: "Roboto", sans-serif;
-    margin: 0;
-    padding: 0;
     display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    height: 100vh; /* Full viewport height */
-    background-color: #fff; /* Optional: Set a background color for the body */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: radial-gradient(circle at top, #0d6efd, #1a237e); /* Modern radial gradient */
+    color: #fff; /* Default text color to white for contrast */
 }
 
 .caixa-cadastro {
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Center content inside caixa-login */
-    align-items: center; /* Center content inside caixa-login */
-    width: 750px; /* Set a width for the login box */
-    height: auto; /* Set a height for the login box */
-    background-color: transparent; /* Remove background color */
-    border-radius: 10px; /* Optional: rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Optional: shadow for depth */
+    justify-content: center;
+    align-items: center;
+    width: 400px; /* Alinhado com o design da tela de login */
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent white for a sleek look */
+    border-radius: 15px;
+    backdrop-filter: blur(10px); /* Glassmorphism effect */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3); /* Modern shadow */
 }
 
-#cadastro-usuario{
-    width: 300px;
-}
-#cadastro-email{
-    width: 300px;
-}
-#cadastro-senha{
-    width: 300px;
+h1 {
+    font-family: "Poppins", sans-serif;
+    font-size: 2.8rem;
+    color: #ffffff;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5); /* Bold shadow for depth */
+    margin-bottom: 20px;
 }
 
-#cadastro-confirmar-senha{
-    width: 300px;
+input[type="text"], input[type="email"], input[type="password"] {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease;
 }
 
-#cadastro-datalist-funcoes{
-    width: 300px;
+input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus {
+    background: rgba(255, 255, 255, 0.3);
 }
-#cadastro-submit{
+
+button {
+    width: 100%;
+    padding: 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffffff;
+    background: linear-gradient(90deg, #1e88e5, #0d47a1);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(90deg, #42a5f5, #1976d2);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.ir-para-login {
     margin-top: 20px;
-    width: 100px;
+    color: #b3e5fc;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
 }
-.ir-para-login{
-    margin: 30px;
+
+.ir-para-login:hover {
+    color: #ffffff;
 }

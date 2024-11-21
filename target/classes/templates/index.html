@@ -21,36 +21,40 @@
   </head>
   <body>
     <div class="caixa-login">
-      <h1>Login</h1>
       <div id="imagem-login">
-        <img src="/images/Foto_Login.jpeg" alt="Logo" />
+        <br>
+        <img class="img" src="/images/imgbranca.png" alt="Logo" />
       </div>
-      <div class="ir-para-cadastro">
-        <a th:href="@{/cadastro}">Não tem conta? Ir para o cadastro</a>
-      </div>
+      <br>
+      <form action="/api/usuario/login" method="POST">
+        <div class="mb-3">
+          <label for="login-usuario" class="form-label">Email</label>
+          <input
+            type="email"
+            name="email"
+            class="form-control"
+            id="login-usuario"
+            placeholder="Usuário"
+          />
+        </div>
 
-      <div class="mb-3">
-        <label for="login-usuario" class="form-label">Nome de Usuário</label>
-        <input
-          type="text"
-          class="form-control"
-          id="login-usuario"
-          placeholder="Usuário"
-        />
-      </div>
-
-      <div class="mb-3">
-        <label for="login-senha" class="form-label">Senha</label>
-        <input
-          type="password"
-          class="form-control"
-          id="login-senha"
-          placeholder="Senha"
-        />
-        <div class="col-auto">
-          <button type="submit" class="btn btn-primary mb-3" id="login-submit">
-            Entrar
-          </button>
+        <div class="mb-3">
+          <label for="login-senha" class="form-label">Senha</label>
+          <input
+            type="password"
+            name="senha"
+            class="form-control"
+            id="login-senha"
+            placeholder="Senha"
+          />
+          <div class="col-auto">
+            <button type="submit" class=" btn btn-primary mb-3" id="login-submit">
+              Entrar
+            </button>
+          </div>
+      </form>
+        <div class="ir-para-cadastro">
+          <a th:href="@{/cadastro}" style="color: white;">Não tem conta? Ir para o cadastro</a>
         </div>
       </div>
     </div>
